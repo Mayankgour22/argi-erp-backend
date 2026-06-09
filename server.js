@@ -32,8 +32,8 @@ app.get('/', (req, res) => {
 });
 
 // MongoDB Connection
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/agri_erp';
-console.log('Connecting to MongoDB...');
+const MONGODB_URI =
+  process.env.MONGODB_URI || process.env.MONGODB_URI;
 
 mongoose.connect(MONGODB_URI)
   .then(() => {
