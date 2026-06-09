@@ -31,9 +31,10 @@ app.get('/', (req, res) => {
   res.json({ message: 'Welcome to the Agriculture ERP API Server' });
 });
 
-// MongoDB Connection
-const MONGODB_URI =
-  process.env.MONGODB_URI || process.env.MONGODB_URI;
+const MONGODB_URI = process.env.MONGODB_URI;
+
+console.log("MONGODB_URI =", process.env.MONGODB_URI);
+
 
 mongoose.connect(MONGODB_URI)
   .then(() => {
